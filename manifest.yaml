@@ -1,0 +1,26 @@
+package_name: job-search-bw
+package_type: vertical-pack
+version: 0.1.0
+compatible_core_version: ">=0.1.0"
+domain: 求职
+governance_mode: collaborative
+install_model: package-private-workspace   # 模型 A：只读包 + 私有工作区
+mount_path: _packages/job-search-bw   # 挂载位置（相对 vault 根）
+
+workflow_type: immediate-analysis
+layer_usage:
+  00-raw: high      # 用户工作区；包内为空占位
+  01-知识: low
+  02-框架: high     # 只读参考
+  03-实战: high
+  04-复盘: medium
+
+directory_mapping:
+  02-框架: "Core 02-框架（稳定判断规则）"
+  03-实战: "Core 03-实战（行动与验证）"
+  04-复盘: "Core 04-复盘（修正与经验）"
+  skills: "额外能力（Core 五层无对应，不冲突）"
+
+privacy:
+  no_personal_info: true
+  user_data_dirs: ["00-raw/", "01-知识/_drafts/"]   # 仅独立使用场景

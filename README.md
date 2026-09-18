@@ -16,8 +16,10 @@
 
 兼容遵循 AGENTS.md／SKILL.md 约定的 Agent。
 
-**实测记录建立中**——本包首次全流程实测（下载 → 安装 → 使用）随发布进行，结果将回填本节。
-同协议族的 `knowledge-growth` 运行时矩阵可作参考，但不等于本包实测。
+**实测记录（2026-09-18 起回填）**：
+- macOS ＋ git clone 路径：✅ 文件完整（33/33）、Agent 协议链与诊断流程跑通
+- macOS ＋ ZIP 路径：✅（用 ditto／Finder 解压；系统 `unzip` CLI 对中文文件名有缺陷，见安装方式三提示）
+- 更多运行时的全流程实测进行中——同协议族的 `knowledge-growth` 运行时矩阵可作参考，但不等于本包实测。
 其他 Agent 不作默认承诺。
 
 ## 安装
@@ -45,6 +47,7 @@ git clone https://github.com/bernardw5174-zfyb/job-search-bw.git _packages/job-s
 
 GitHub Release 下载 zip → 解压 → 放入 `vault/_packages/job-search-bw/`。
 ⚠️ 代价：无法 `git pull`，包内后续更新（含验证状态推进）需手动重下覆盖。
+💡 解压提示：请用 Finder 双击／7-Zip／Keka 解压；旧版 `unzip` 命令行工具对中文文件名可能报错。
 
 ## 第一次用
 

@@ -33,10 +33,10 @@ git clone https://github.com/bernardw5174-zfyb/job-search-bw.git _packages/job-s
 
 然后在 Agent 里说：**"我要开始求职"** —— Agent 会：
 1. 扫描 `_packages/*/manifest.yaml`，按 `domain` 字段匹配（本包 `domain: 求职`）
-2. 命中 → 读本包 `skills/` 匹配任务（诊断/关键词/改写/模拟面试）
+2. 命中 → 读本包 `skills/` 匹配任务（诊断/关键词/改写）
 3. 产出写入 `vault/求职/`（用户工作区）——**绝不写回 `_packages/`**
 
-> 发现机制：Agent 靠读 `manifest.yaml` 发现包，不靠目录名猜测。见 Core 协议（`AGENTS.md`「已挂载的垂直包」节——⏳ **该节属 Core V5 ④ 待新增，V5 落地前此引用暂不成立**，不影响本包独立使用）。
+> 发现机制：Agent 靠读 `manifest.yaml` 发现包，不靠目录名猜测。见 Core 协议（`AGENTS.md`「已挂载的垂直包」节——✅ **已随 Core v0.1.4 落地**，2026-09-18）。
 
 ## 升级
 
@@ -62,6 +62,6 @@ git pull
 
 ## 边界声明
 
-- **本 repo 不承载任何用户数据**：简历、JD、投递记录、面试复盘全部在用户工作区（`vault/求职/` 或独立使用时的本地 `00-raw/`、`01-知识/_drafts/`）
+- **本 repo 不承载任何用户数据**：简历、JD、投递记录等全部在用户工作区（`vault/求职/` 或独立使用时的本地 `00-raw/`、`01-知识/_drafts/`）
 - 本包内 `00-raw/`、`01-知识/` 目录为空占位，**仅为独立使用场景保留**；Core 场景下用户数据一律落 `vault/求职/`
 - 案例回流：只有人工脱敏、抽象后的共性规律才会回流本 repo（见 `04-复盘/假设注册表-公开版.md` 更新记录）

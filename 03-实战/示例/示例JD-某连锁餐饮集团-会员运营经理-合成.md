@@ -37,4 +37,3 @@
 - 用《01-resume-diagnosis》诊断示例简历 vs 本 JD 的匹配度
 - 用《02-keyword-intelligence》跑关键词对标（观察 JD 高频词：储值卡/分层运营/互通/复购/SQL/AI）
 - 用《03-resume-rewrite》改写示例简历的摘要与核心业绩
-- 用《04-mock-interview》模拟一轮业务面（重点：追问"会员消费占比36%"的口径）

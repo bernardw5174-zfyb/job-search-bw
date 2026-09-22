@@ -7,3 +7,6 @@
 01-知识/*
 !01-知识/README.md
 !01-知识/_drafts/README.md
+
+# Agent 运行时目录（WorkBuddy 等）——memory/日志/tmp 沉淀全部个人数据，防整包上公开仓库
+.workbuddy/

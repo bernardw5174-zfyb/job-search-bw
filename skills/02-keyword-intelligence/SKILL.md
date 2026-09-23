@@ -1,6 +1,6 @@
 ---
 name: 02-keyword-intelligence
-description: 关键词情报：JD语料对标简历，找缺失/埋没/趋势/废话词与命中率。
+description: 关键词情报（含跑词频）：收集 JD 语料做词频分析建词表，再对标简历找缺失/埋没/趋势/废话词与命中率。
 version: 0.1.0
 author: Knowledge Growth (bernardw5174-zfyb)
 license: MIT

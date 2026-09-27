@@ -1,10 +1,11 @@
 ---
 name: 05-material-ingest
 description: 材料接收：微信文章/URL/附件 → 处理 → 引导去向（JD→关键词对标）。
-version: 0.1.0
-author: Knowledge Growth (bernardw5174-zfyb)
 license: MIT
-platforms: [linux, macos, windows]
+metadata:
+  version: 0.1.0
+  author: Knowledge Growth (bernardw5174-zfyb)
+  platforms: [linux, macos, windows]
 ---
 
 # 材料接收（微信文章 / URL / 附件）
@@ -27,6 +28,7 @@ platforms: [linux, macos, windows]
 2. **用选项问去向**：存进知识库 / 不用存 / 提炼框架候选 / 其他
 3. **若存**：确认领域（默认求职）→ 落 `00-raw/`（网页抓取标「非字节级 ＋ 时间戳 ＋ URL」）→ `01-知识/_drafts/` 生成草稿（**停在草稿等确认**，不自动晋升）
    - **JD 发布时间采集（L0 幽灵岗输入）**：材料为 JD／招聘信息时，**若页面含 JD 发布时间／挂载时长／招聘期限信息，一并记录到 Raw 文件头**（如 `published: 2026-08-15`）——L0 幽灵岗检测的第一信号"挂载时长异常"依赖此输入；页面无则不编造，标"unknown"
+   - **写入后自检（B3）**：若产物落 `01-知识/`（词表草稿晋升后），跑 `python3 scripts/check-wordlist.py` 确认 ✅——frontmatter 值含冒号须引号、`confirmed_at` 必填、`corpus_size` 与语料一致（见根 `AGENTS.md`「词表写入铁律」）
 4. **类型引导**：
    - **JD／招聘信息** → 提示走 `skills/02-keyword-intelligence`（关键词对标／单 JD 评估）；**积累 10-15 份同类 JD 可建岗位词表**（框架第 1-2 步语料驱动，词表随语料重算）
      - **累积提示**：入库后数 `00-raw/` 文件数 N（近似 JD 数）；**N ≥ 10 且 N 为 10 的倍数**时提示："语料已累积约 N 份，是否重跑词表？（喂 `00-raw/` 全部 JD 走频率分析）"——近期已提示过则忽略

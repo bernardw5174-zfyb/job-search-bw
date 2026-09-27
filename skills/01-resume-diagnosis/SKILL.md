@@ -1,10 +1,11 @@
 ---
 name: 01-resume-diagnosis
 description: 简历诊断：按框架找问题、排修复优先级。读简历→诊断→Top 5 修复清单。
-version: 0.1.0
-author: Knowledge Growth (bernardw5174-zfyb)
 license: MIT
-platforms: [linux, macos, windows]
+metadata:
+  version: 0.1.0
+  author: Knowledge Growth (bernardw5174-zfyb)
+  platforms: [linux, macos, windows]
 ---
 
 # 简历诊断

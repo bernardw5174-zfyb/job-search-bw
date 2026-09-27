@@ -1,10 +1,11 @@
 ---
 name: 03-resume-rewrite
 description: 经历改写：XYZ公式把"做了什么"改"带来什么结果"，输出新版。
-version: 0.1.0
-author: Knowledge Growth (bernardw5174-zfyb)
 license: MIT
-platforms: [linux, macos, windows]
+metadata:
+  version: 0.1.0
+  author: Knowledge Growth (bernardw5174-zfyb)
+  platforms: [linux, macos, windows]
 ---
 
 # 经历改写

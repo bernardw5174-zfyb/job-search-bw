@@ -1,10 +1,11 @@
 ---
 name: 02-keyword-intelligence
 description: 关键词情报（含跑词频）：收集 JD 语料做词频分析建词表，再对标简历找缺失/埋没/趋势/废话词与命中率。
-version: 0.1.0
-author: Knowledge Growth (bernardw5174-zfyb)
 license: MIT
-platforms: [linux, macos, windows]
+metadata:
+  version: 0.1.0
+  author: Knowledge Growth (bernardw5174-zfyb)
+  platforms: [linux, macos, windows]
 ---
 
 # 关键词情报
@@ -36,6 +37,7 @@ platforms: [linux, macos, windows]
 5. 输出行动清单：先保 table-stakes → 前置埋没词 → 加趋势词 → 删废话词
 6. 提示平台双轨：改词同时打到在线简历与附件 PDF
 - 产出：词表确认后落 `01-知识/`（对标基准）
+7. **写入后自检（B3）**：词表落盘后跑 `python3 scripts/check-wordlist.py` 确认 ✅——frontmatter 值含冒号须引号、`confirmed_at` 必填、`corpus_size` 与语料一致（见根 `AGENTS.md`「词表写入铁律」）
 
 **场景 B · 单 JD 评估**（这个 JD 匹配吗）——**关卡递进：不通过就停，不浪费下一级成本**：
 

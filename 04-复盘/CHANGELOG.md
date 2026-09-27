@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## v0.1.1（2026-09-27）· 测试收口统一升版
+
+- **输入侧治理（B1-B4）**：词表门禁＋写入铁律＋skill metadata 规范化——词表落盘必须带 `confirmed_at`（无则视为 Agent 自封）、`corpus_size` 与语料实况一致、frontmatter 值含半角冒号必须加引号；新增 `scripts/check-wordlist.py` 门禁（report-only）
+- **工作区根设置**：AGENTS.md 工作区边界节补「工作区根设置」——把 Agent 工作区直接设在包根目录；若平台工作区根 ≠ 包根，以本文件为界
+- **词表规范修订**：词表不走 `_drafts/` 草稿流程（统计产物，对话确认即晋升），但落盘必须带 `confirmed_at`；计数口径自洽；删除悬空 verify 脚本引用
+- **Gitee 镜像 workflow**：新增 `.github/workflows/mirror.yml`（目标 gitee.com/BernardW/job-search-bw）
+- **假设注册表登记 #15**：未命中归因机制（闸0-3）——9-24 WorkBuddy 真实使用 3 次同类误判反推，⚠️验证中样本 3<10
+- **兼容性实测回填**：Windows 10 ＋ WorkBuddy ＋ Gitee 安装路径全流程实测（2026-09-27）：Gitee 一键安装→JD 语料字节级入库→三族词表→简历改写→批量 JD 分流→投递登记 跑通
+
 ## [未发布]（候选内容，待内部测试后随 v0.1.1 正式发布）
 
 - **模拟面试相关移除**（暂未收录，规划中）：模拟面试框架／`skills/04-mock-interview`／面试复盘模板

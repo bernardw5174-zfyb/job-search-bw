@@ -1,6 +1,6 @@
 package_name: job-search-bw
 package_type: vertical-pack
-version: 0.1.0
+version: 0.1.1
 compatible_core_version: ">=0.1.0"
 domain: 求职
 governance_mode: collaborative

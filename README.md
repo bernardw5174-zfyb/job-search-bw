@@ -53,6 +53,7 @@ git clone https://github.com/bernardw5174-zfyb/job-search-bw.git _packages/job-s
 ### 方式三：不会 git（ZIP）
 
 GitHub Release 下载 zip → 解压 → 放入 `vault/_packages/job-search-bw/`。
+⚠️ **选择 `job-search-bw-main.zip` 资产下载**（main 分支最新内容；同页自动生成的 "Source code" zip 是 v0.1.1 发布时点，不含后续更新）。
 ⚠️ 代价：无法 `git pull`，包内后续更新（含验证状态推进）需手动重下覆盖。
 💡 解压提示：请用 Finder 双击／7-Zip／Keka 解压；旧版 `unzip` 命令行工具对中文文件名可能报错。
 

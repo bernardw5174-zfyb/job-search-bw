@@ -23,7 +23,7 @@
 兼容遵循 AGENTS.md／SKILL.md 约定的 Agent。
 
 **实测记录（2026-09-18 起回填）**：
-- macOS ＋ git clone 路径：✅ 文件完整（33/33）、Agent 协议链与诊断流程跑通
+- macOS ＋ git clone 路径：✅ 文件完整（34/34）、Agent 协议链与诊断流程跑通
 - macOS ＋ ZIP 路径：✅（用 ditto／Finder 解压；系统 `unzip` CLI 对中文文件名有缺陷，见安装方式三提示）
 - Windows 10 ＋ WorkBuddy ＋ Gitee 安装路径：✅ 全流程实测（2026-09-27）：Gitee 一键安装→JD 语料字节级入库→三族词表→简历改写→批量 JD 分流→投递登记 跑通
 - 更多运行时的全流程实测进行中——同协议族的 `knowledge-growth` 运行时矩阵可作参考，但不等于本包实测。

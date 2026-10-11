@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""job-search-bw 词表 frontmatter 门禁（B1，2026-09-27）
+"""job-search-bw 词频表 frontmatter 门禁（B1，2026-09-27）
 
-校验 01-知识/*.md 词表页：
+校验 01-知识/*.md 词频表页：
 1. frontmatter YAML 可解析（内置最小检查：引号平衡 / 未引号冒号 / 重复键）
 2. confirmed_at 必填（晋升 active 必须留痕）
 3. corpus_size 与 00-raw/ 语料数一致（有则核，无则跳过）
@@ -62,7 +62,7 @@ def fm_block(text):
 def main():
     files = sorted(glob.glob(os.path.join(KB, "*.md")))
     if not files:
-        print("⚠️ 01-知识/ 无词表页（跳过）")
+        print("⚠️ 01-知识/ 无词频表页（跳过）")
         return 0
 
     fails = []
@@ -98,12 +98,12 @@ def main():
             fails.append(f"{rel}: {'；'.join(problems)}")
 
     if fails:
-        print("❌ 词表 frontmatter 门禁失败:")
+        print("❌ 词频表 frontmatter 门禁失败:")
         for f in fails:
             print(f"  - {f}")
         return 1
 
-    print(f"✅ 词表 frontmatter 门禁通过（{len(files)} 页）")
+    print(f"✅ 词频表 frontmatter 门禁通过（{len(files)} 页）")
     return 0
 
 

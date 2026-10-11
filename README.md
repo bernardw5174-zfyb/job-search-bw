@@ -50,6 +50,8 @@ git clone https://github.com/bernardw5174-zfyb/job-search-bw.git _packages/job-s
 
 **包只读、你的数据在 `vault/求职/`——升级 pull 包，永远不影响你的资料。**
 
+⚠️ **判断有无更新不能只看版本号**：维护者常在版本号不变的情况下提交内容更新（`manifest.yaml` version 可能长期不变但内容已更新）。`git pull` 有变化即更新；报 `Already up to date` 时建议比对 commit hash（本地 vs `origin/main`）确认已最新。ZIP 用户无法自动感知，需重新下载 `job-search-bw-main.zip`。
+
 ### 方式三：不会 git（ZIP）
 
 GitHub Release 下载 zip → 解压 → 放入 `vault/_packages/job-search-bw/`。

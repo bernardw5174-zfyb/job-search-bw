@@ -99,7 +99,7 @@ docs/              ← 教程与集成指引
 2. **`confirmed_at` 必填**——词频表晋升 active 必须留痕（格式 `2026-09-27`）；缺=未确认词频表，不得作为对标基准
 3. **`corpus_size` 必须与 `00-raw/` 语料实况一致**——写前重算核对；不一致标注"目录含未计入新件"，不虚写
 
-**写入后自检**：跑 `python3 scripts/check-wordlist.py`，确认 ✅ 通过再交付（B1 门禁，report-only）。
+**写入后自检**：跑 `python3 scripts/check-wordlist.py`，确认 ✅ 通过再交付（B1 门禁，report-only）。**Core 挂载模式**（词表页在 `vault/<领域>/01-知识/` 时）需传 `--root vault/<领域>`（如 `python3 scripts/check-wordlist.py --root vault/求职`）；独立使用模式默认包目录，无需参数。`00-raw/README.md` 占位不计入语料。
 
 ## 工作区边界（2026-09-24 真实使用暴露后补）
 
